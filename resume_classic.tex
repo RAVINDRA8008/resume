@@ -1,0 +1,161 @@
+%-------------------------
+% Master ATS-Friendly Technical Resume
+% Candidate: Ravindra Chowdary Jonnagadla
+% Compiled for ATS optimization & 1-page compliance
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands for ATS-friendly structure
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1.5pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Ravindra Chowdary Jonnagadla} \\ \vspace{3pt}
+    \small 
+    \href{mailto:ravindrachowdary8008@gmail.com}{\underline{ravindrachowdary8008@gmail.com}} $|$ 
+    +91 9398151678 $|$ 
+    Chennai, India \\ \vspace{2pt}
+    \href{https://linkedin.com/in/ravindrachowdary}{\underline{linkedin.com/in/ravindrachowdary}} $|$ 
+    \href{https://github.com/RAVINDRA8008}{\underline{github.com/RAVINDRA8008}}
+\end{center}
+\vspace{-8pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM Institute of Science and Technology}{Chennai, India}
+      {B.Tech in Computer Science and Engineering -- Cloud Computing (CGPA: 8.01/10)}{Graduated: May 2026}
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash/Shell \\ \vspace{1pt}
+     \textbf{AI \& Machine Learning:} PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO (RL), NLP \\ \vspace{1pt}
+     \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Linux \\ \vspace{1pt}
+     \textbf{Backend \& Web:} FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Tailwind CSS \\ \vspace{1pt}
+     \textbf{Specialized Domains:} Voice AI Telephony (STT/LLM/TTS), EEG Signal Processing, Hybrid Quantum-Classical Computing
+    }}
+ \end{itemize}
+\vspace{-6pt}
+
+%-----------STARTUP & PRODUCT EXPERIENCE-----------
+\section{Startup \& Product Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{Waani -- AI Voice Calling Agent}}{Chennai, India}
+      {Founder \& Lead Engineer}{July 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected and coded an AI voice calling agent prototype integrating telephony APIs, Sarvam AI speech models (STT/TTS), and LLM inference to evaluate natural Hindi-English code-switching dialogs.}
+        \resumeItem{Built conversational state logic and dialogue branching for automated lead qualification and appointment booking, configuring fallback rules for human operator handoff.}
+        \resumeItem{Engineered backend service endpoints connecting real-time audio streams with speech recognition and generation APIs, profiling latency and cost trade-offs across model providers.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://lynkzen.in}{\textbf{LynkZen -- Instagram DM Automation SaaS}}}{Chennai, India}
+      {Founder \& Lead Engineer}{April 2026 -- June 2026}
+      \resumeItemListStart
+        \resumeItem{Built and launched an Instagram DM automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story replies, and keyword sequences.}
+        \resumeItem{Developed an interactive visual workflow builder allowing creators to configure multi-step conditional messaging funnels and custom automated response paths without code.}
+        \resumeItem{Integrated Meta Graph API messaging endpoints and grew the early-access waitlist to \textbf{3,000 signups in 2 months}, against a 5,000-user capacity cap.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------SELECTED TECHNICAL PROJECTS-----------
+\section{Selected Technical Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} $|$ \emph{PyTorch, Signal Processing}}{}
+      \resumeItemListStart
+        \resumeItem{Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.}
+        \resumeItem{Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.}
+        \resumeItem{Evaluated classification performance across 4 emotion classes on standard benchmarks, achieving \textbf{82.55\% accuracy}, \textbf{0.83 macro F1-score}, and \textbf{0.77 Cohen's kappa}.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{SmartCap: Real-Time Subtitle Generation}} $|$ \emph{Python, Whisper, FFmpeg}}{\href{https://ieeexplore.ieee.org/document/11085491}{IEEE ICICV 2025}}
+      \resumeItemListStart
+        \resumeItem{Built an automated audio-visual transcription tool using OpenAI Whisper, implementing word-level acoustic timestamp alignment to generate synchronized video subtitles (.srt/.vtt).}
+        \resumeItem{Engineered media preprocessing scripts using FFmpeg and Python multithreading to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{Smart QR-Based University Parking System}} $|$ \emph{Flask, Python, Twilio API}}{\href{https://ieeexplore.ieee.org/document/11166870}{IEEE CONIT 2025}}
+      \resumeItemListStart
+        \resumeItem{Developed a campus parking management application with dynamic, time-expiring cryptographic QR code generation for gate validation and Twilio OTP user authentication.}
+        \resumeItem{Implemented a lightweight Progressive Web App (PWA) with real-time slot occupancy tracking, achieving a \textbf{98.7\% booking transaction success rate} across evaluated trial simulations.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------PUBLICATIONS & CERTIFICATIONS-----------
+\section{Publications \& Certifications}
+  \resumeItemListStart
+    \resumeItem{\textbf{IEEE ICICV 2025:} \href{https://ieeexplore.ieee.org/document/11085491}{\emph{``SmartCap: Real-Time Synchronized Subtitles for Videos''}} -- Published in IEEE Xplore (Doc ID: \href{https://ieeexplore.ieee.org/document/11085491}{11085491}), Sole/Lead Author.}
+    \resumeItem{\textbf{IEEE CONIT 2025:} \href{https://ieeexplore.ieee.org/document/11166870}{\emph{``Smart QR-Based University Parking Management System...''}} -- Published in IEEE Xplore (Doc ID: \href{https://ieeexplore.ieee.org/document/11166870}{11166870}), Co-Author.}
+    \resumeItem{\textbf{AWS Certified Cloud Practitioner:} Amazon Web Services -- \href{https://www.credly.com/badges/3dc45737-a240-4ebd-865c-ac932ab9d71c/public_url}{\underline{Credly Verified Credential}} (Badge: 3dc45737).}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
