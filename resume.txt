@@ -1,0 +1,60 @@
+RAVINDRA CHOWDARY JONNAGADLA
+ravindrachowdary8008@gmail.com | +91 9398151678 | Chennai, India
+LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008
+
+================================================================================
+EDUCATION
+================================================================================
+SRM Institute of Science and Technology, Chennai, India
+Bachelor of Technology in Computer Science and Engineering -- Cloud Computing
+CGPA: 8.01 / 10 | Graduated: May 2026
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+- Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash/Shell
+- AI & Machine Learning: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO (RL), NLP
+- Cloud & DevOps: AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Linux
+- Backend & Web: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Tailwind CSS
+- Specialized Domains: Voice AI Telephony (STT/LLM/TTS), EEG Signal Processing, Hybrid Quantum-Classical Computing
+
+================================================================================
+STARTUP & PRODUCT EXPERIENCE
+================================================================================
+Waani -- AI Voice Calling Agent | Chennai, India
+Founder & Lead Engineer | July 2026 -- Present
+- Architected and coded an AI voice calling agent prototype integrating telephony APIs, Sarvam AI speech models (STT/TTS), and LLM inference to evaluate natural Hindi-English code-switching dialogs.
+- Built conversational state logic and dialogue branching for automated lead qualification and appointment booking, configuring fallback rules for human operator handoff.
+- Engineered backend service endpoints connecting real-time audio streams with speech recognition and generation APIs, profiling latency and cost trade-offs across model providers.
+
+LynkZen -- Instagram DM Automation SaaS | Chennai, India [lynkzen.in]
+Founder & Lead Engineer | April 2026 -- June 2026
+- Built and launched an Instagram DM automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story replies, and keyword sequences.
+- Developed an interactive visual workflow builder allowing creators to configure multi-step conditional messaging funnels and custom automated response paths without code.
+- Integrated Meta Graph API messaging endpoints and grew the early-access waitlist to 3,000 signups in 2 months, against a 5,000-user capacity cap.
+
+================================================================================
+SELECTED TECHNICAL PROJECTS
+================================================================================
+AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing
+[GitHub: github.com/RAVINDRA8008]
+- Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.
+- Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.
+- Evaluated classification performance across 4 emotion classes on standard benchmarks, achieving 82.55% accuracy, 0.83 macro F1-score, and 0.77 Cohen's kappa.
+
+SmartCap: Real-Time Subtitle Generation | Python, Whisper, FFmpeg | IEEE ICICV 2025
+[IEEE Xplore: ieeexplore.ieee.org/document/11085491]
+- Built an automated audio-visual transcription tool using OpenAI Whisper, implementing word-level acoustic timestamp alignment to generate synchronized video subtitles (.srt/.vtt).
+- Engineered media preprocessing scripts using FFmpeg and Python multithreading to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.
+
+Smart QR-Based University Parking System | Flask, Python, Twilio API | IEEE CONIT 2025
+[IEEE Xplore: ieeexplore.ieee.org/document/11166870]
+- Developed a campus parking management application with dynamic, time-expiring cryptographic QR code generation for gate validation and Twilio OTP user authentication.
+- Implemented a lightweight Progressive Web App (PWA) with real-time slot occupancy tracking, achieving a 98.7% booking transaction success rate across evaluated trial simulations.
+
+================================================================================
+PUBLICATIONS & CERTIFICATIONS
+================================================================================
+- IEEE ICICV 2025: "SmartCap: Real-Time Synchronized Subtitles for Videos" -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.
+- IEEE CONIT 2025: "Smart QR-Based University Parking Management System..." -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.
+- AWS Certified Cloud Practitioner: Amazon Web Services -- Credly Verified (Badge: 3dc45737-a240-4ebd-865c-ac932ab9d71c).
