@@ -14,7 +14,7 @@ Chennai, India
 Co-Founder & Lead Engineer
 July 2026 – Present
 • Architected an ultra-low-latency duplex voice pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token
-inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ synthetic concurrent voice sessions.
+inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ concurrent voice sessions.
 • Engineered conversational state machines and dynamic intent branching for automated lead qualification, instrumenting Prometheus
 metrics and Grafana dashboards to track streaming audio packet jitter and queue depth.
 • Built an asynchronous dual-channel audio ring buffer with edge Voice Activity Detection (VAD) over WebSockets, implementing atomic
@@ -24,39 +24,38 @@ Chennai, India
 Founding Engineer
 April 2026 – June 2026
 • Built and launched an event-driven Instagram automation engine using Next.js, TypeScript, and Tailwind CSS, decoupling webhook
-ingest via BullMQ asynchronous worker queues to absorb 10k+ burst events.
+ingest via BullMQ asynchronous worker queues to absorb bursts of 10k+ concurrent webhook events.
 • Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels
 and automated response paths without writing code.
 • Scaled platform to 3,000 active beta signups for closed testing, implementing token-bucket rate limiting via atomic Redis Lua scripts
 to eliminate race conditions and guarantee zero 429 quota violations against Meta Graph API limits.
 Technical Projects & Research
 AMERS: Multimodal Emotion Recognition System
-| PyTorch, Signal Processing
+• PyTorch, Signal Processing
 Hugging Face
-| IEEE ICETEA 2026
+• IEEE ICETEA 2026
 • Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via
 Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.
 • Integrated an Emotion-Aware Gating (EAG) WGAN-GP generator with a PPO reinforcement learning controller, dynamically scheduling
 synthetic-to-real training batches against discriminator reward stability.
-• Evaluated on DEAP and SEED benchmarks under Leave-One-Subject-Out (LOSO) cross-validation across 4 emotion classes,
-achieving 82.55% accuracy (+7.4% over unimodal baselines), 0.83 macro F1-score, and 0.77 Cohen Kappa score, open-sourcing
-model checkpoints on Hugging Face.
+• Evaluated on DEAP/SEED benchmarks via LOSO cross-validation across 4 emotion classes, achieving 82.55% accuracy (+7.4% over
+baselines), 0.83 macro F1-score, and 0.77 Cohen’s kappa, open-sourcing checkpoints on Hugging Face.
 SmartCap: Automated Subtitle & Transcoding Pipeline
-| Python, Whisper, FFmpeg, ONNX
-IEEE ICICV 2025 (Doc ID: 11085491)
-• Built an automated transcription pipeline combining Whisper with acoustic timestamp alignment for frame-accurate subtitles (.srt/.vtt),
-quantizing models to INT8 via ONNX Runtime to achieve a 0.35x Real-Time Factor (RTF), published as Lead Author.
+• Python, Whisper, FFmpeg, ONNX
+IEEE ICICV 2025
+• Built an automated transcription pipeline combining Whisper with timestamp alignment for frame-accurate subtitles (.srt/.vtt), quantizing
+to INT8 via ONNX Runtime to achieve a 0.35x Real-Time Factor (RTF), published as Lead Author (Doc ID: 11085491).
 • Architected an asynchronous worker pipeline orchestrating FFmpeg stream filters for dynamic audio normalization and hardcoded
 subtitle burning, isolating CPU-bound transcoding to eliminate event-loop starvation.
 Smart QR-Based University Parking System
-| Flask, Python, PostgreSQL, Redis
-IEEE CONIT 2025 (Doc ID: 11166870)
+• Flask, Python, PostgreSQL, Redis
+IEEE CONIT 2025
 • Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in
-Redis to prevent replay attacks, and Twilio OTP verification, published as Co-Author.
+Redis to prevent replay attacks, and Twilio OTP verification, published as Co-Author (Doc ID: 11166870).
 • Engineered slot reservation concurrency using optimistic row-level locking with versioning in PostgreSQL, maintaining zero
-double-booking anomalies and 99.8% transaction integrity under simulated 1,000-user rush-hour contention.
+double-booking anomalies and a 99.8% transaction success rate under simulated 1,000-user rush-hour contention.
 Technical Skills
-Languages: Python, C++, SQL, PostgreSQL, MySQL, JavaScript, TypeScript, Bash, Shell Scripting
+Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting
 AI/ML & Research: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Multimodal Learning, WGAN-GP, Reinforcement Learning, PPO,
 NLP, EEG Signal Processing, Vector Search, ChromaDB
 Generative AI & Speech: Whisper, Faster-Whisper, ONNX Runtime, Model Quantization, Sentence Transformers, RAG, FFmpeg,
