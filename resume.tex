@@ -13,8 +13,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontspec}
+\setmainfont{Arial}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -27,11 +27,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Monochrome Palette (Timeless High-Contrast Black & Crisp Slate Rule)
+% Monochrome Palette (Timeless High-Contrast Black & Crisp Rules)
 \definecolor{primary}{RGB}{0, 0, 0}         % Pure Black for headings & emphasis
-\definecolor{secondary}{RGB}{45, 45, 45}    % Deep Neutral for metadata & dates
+\definecolor{secondary}{RGB}{50, 50, 50}    % Deep Neutral for metadata & dates
 \definecolor{linkcolor}{RGB}{0, 0, 0}       % Elegant Black for hyperlinks (clickable, zero blue tint)
-\definecolor{rulecolor}{RGB}{180, 180, 180} % Clean subtle horizontal rule divider
+\definecolor{rulecolor}{RGB}{40, 40, 40}    % Crisp dark rule divider
 
 \hypersetup{
     colorlinks=true,
@@ -42,7 +42,7 @@
 % Section Titles with Sleek Accents
 \titleformat{\section}{
   \vspace{-7pt}\color{primary}\raggedright\large\bfseries
-}{}{0em}{}[\color{rulecolor}\titlerule \vspace{-4pt}]
+}{}{0em}{}[\color{rulecolor}{\titlerule[0.7pt]} \vspace{-4pt}]
 
 % Custom commands for bulleted lists and subheadings
 \newcommand{\resumeItem}[1]{
