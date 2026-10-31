@@ -6,7 +6,7 @@
 
 \documentclass[letterpaper,10pt]{article}
 
-\usepackage[margin=0.48in]{geometry}
+\usepackage[margin=0.40in, top=0.38in, bottom=0.36in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[dvipsnames]{xcolor}
@@ -41,33 +41,33 @@
 
 % Section Titles with Sleek Accents
 \titleformat{\section}{
-  \vspace{-6pt}\color{primary}\raggedright\large\bfseries
+  \vspace{-7pt}\color{primary}\raggedright\large\bfseries
 }{}{0em}{}[\color{rulecolor}\titlerule \vspace{-4pt}]
 
 % Custom commands for bulleted lists and subheadings
 \newcommand{\resumeItem}[1]{
-  \item\small{{#1 \vspace{-1.2pt}}}
+  \item\small{{#1 \vspace{-1.5pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1.5pt}\item
+  \vspace{-2.5pt}\item
     \begin{tabular*}{0.985\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\color{primary}#1} & \small\color{secondary}#2 \\
       \textit{\small#3} & \small\color{secondary}#4 \\
-    \end{tabular*}\vspace{-3.5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-1.5pt}\item
+    \vspace{-2.5pt}\item
     \begin{tabular*}{0.985\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \small\color{secondary}#2 \\
-    \end{tabular*}\vspace{-3.5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.14in, label={\textcolor{primary}{\scriptsize$\bullet$}}]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +76,7 @@
 
 %----------HEADER----------
 \begin{center}
-    {\fontsize{20}{23}\selectfont \textbf{\color{primary}Ravindra Chowdary Jonnagadla}} \\ \vspace{3.5pt}
+    {\fontsize{19}{22}\selectfont \textbf{\color{primary}Ravindra Chowdary Jonnagadla}} \\ \vspace{2.5pt}
     \small
     \href{mailto:ravindrachowdary8008@gmail.com}{ravindrachowdary8008@gmail.com} $|$ 
     +91 9398151678 $|$ 
@@ -85,7 +85,7 @@
     \href{https://github.com/RAVINDRA8008}{github.com/RAVINDRA8008} $|$ 
     \href{https://github.com/RAVINDRA8008/resume}{github.com/RAVINDRA8008/resume}
 \end{center}
-\vspace{-9pt}
+\vspace{-11pt}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -139,7 +139,7 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} $|$ \emph{PyTorch, Signal Processing}}{}
+      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} $|$ \emph{PyTorch, Signal Processing}}{IEEE ICETEA 2026}
       \resumeItemListStart
         \resumeItem{Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.}
         \resumeItem{Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.}
@@ -166,6 +166,7 @@
 %-----------PUBLICATIONS & CERTIFICATIONS-----------
 \section{Publications \& Certifications}
   \resumeItemListStart
+    \resumeItem{\textbf{IEEE ICETEA 2026:} \emph{``Adaptive GAN-Augmented EEG--Speech Emotion Recognition via Deep Reinforcement Learning''} -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author (R. C. Jonnagadla, V. Niketh, R. Naresh).}
     \resumeItem{\textbf{IEEE ICICV 2025:} \href{https://ieeexplore.ieee.org/document/11085491}{\emph{``SmartCap: Real-Time Synchronized Subtitles for Videos''}} -- Published in IEEE Xplore (Doc ID: \href{https://ieeexplore.ieee.org/document/11085491}{11085491}), Sole/Lead Author.}
     \resumeItem{\textbf{IEEE CONIT 2025:} \href{https://ieeexplore.ieee.org/document/11166870}{\emph{``Smart QR-Based University Parking Management System...''}} -- Published in IEEE Xplore (Doc ID: \href{https://ieeexplore.ieee.org/document/11166870}{11166870}), Co-Author.}
     \resumeItem{\textbf{AWS Certified Cloud Practitioner:} Amazon Web Services -- \href{https://www.credly.com/badges/3dc45737-a240-4ebd-865c-ac932ab9d71c/public_url}{\underline{Credly Verified Credential}} (Badge: 3dc45737).}

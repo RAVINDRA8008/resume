@@ -36,7 +36,7 @@ Founder & Lead Engineer | April 2026 -- June 2026
 ================================================================================
 SELECTED TECHNICAL PROJECTS
 ================================================================================
-AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing
+AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing | IEEE ICETEA 2026
 [GitHub: github.com/RAVINDRA8008]
 - Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.
 - Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.
@@ -55,6 +55,7 @@ Smart QR-Based University Parking System | Flask, Python, Twilio API | IEEE CONI
 ================================================================================
 PUBLICATIONS & CERTIFICATIONS
 ================================================================================
+- IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG-Speech Emotion Recognition via Deep Reinforcement Learning" -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author (R. C. Jonnagadla, V. Niketh, R. Naresh).
 - IEEE ICICV 2025: "SmartCap: Real-Time Synchronized Subtitles for Videos" -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.
 - IEEE CONIT 2025: "Smart QR-Based University Parking Management System..." -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.
 - AWS Certified Cloud Practitioner: Amazon Web Services -- Credly Verified (Badge: 3dc45737-a240-4ebd-865c-ac932ab9d71c).

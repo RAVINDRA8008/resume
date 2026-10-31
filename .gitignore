@@ -5,3 +5,7 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+bin/
+*.zip
+.claude/
+skills-lock.json
