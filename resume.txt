@@ -1,60 +1,52 @@
 RAVINDRA CHOWDARY JONNAGADLA
-ravindrachowdary8008@gmail.com | +91 9398151678 | Chennai, India
-LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008 | lynkzen.in
+Chennai, India | +91 9398151678 | ravindrachowdary8008@gmail.com
+LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008 | SaaS: lynkzen.in
 
-================================================================================
 EDUCATION
-================================================================================
+----------------------------------------------------------------------------------------------------
 SRM Institute of Science and Technology, Chennai, India
-Bachelor of Technology in Computer Science and Engineering -- Cloud Computing
-CGPA: 8.01 / 10 | May 2026
+B.Tech in Computer Science and Engineering -- Cloud Computing (CGPA: 8.01/10)
+Graduation Date: May 2026
 
-================================================================================
 TECHNICAL SKILLS
-================================================================================
-- Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting
-- AI & Machine Learning: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO (RL), NLP
-- Cloud & DevOps: AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD, Git, Linux
+----------------------------------------------------------------------------------------------------
+- Languages: Python, C++, SQL, PostgreSQL, MySQL, JavaScript, TypeScript, Bash, Shell Scripting
+- AI & Machine Learning: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO Reinforcement Learning, NLP
+- Cloud & DevOps: AWS, Docker, Kubernetes, Terraform, CI/CD, GitHub Actions, Linux, Git
 - Backend & Web: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Redis, Celery
-- Certifications: AWS Certified Cloud Practitioner -- Credly Verified (Badge ID: 3dc45737-a240-4ebd-865c-ac932ab9d71c)
+- Certifications: AWS Certified Cloud Practitioner (Credly Verified Credential ID: 3dc45737-a240-4ebd-865c-ac932ab9d71c)
 
-================================================================================
 PROFESSIONAL EXPERIENCE
-================================================================================
-Waani -- Conversational Voice AI Platform | Chennai, India
-Lead Engineer & Co-Founder | July 2026 -- Present
-- Architected an end-to-end conversational voice agent integrating telephony protocols, streaming STT (Sarvam AI), and LLM inference, achieving <800ms latency for natural Hindi-English code-switching dialogs.
+----------------------------------------------------------------------------------------------------
+Waani -- Conversational Voice AI Platform                                             Chennai, India
+Lead Engineer & Co-Founder                                                      July 2026 -- Present
+- Architected an end-to-end voice agent integrating telephony protocols, streaming STT (Sarvam AI), and LLM inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ simulated pilot calls.
 - Engineered conversational state machines and dynamic intent branching for automated lead qualification and appointment scheduling, configuring automated fallback logic for human operator handoff.
-- Implemented duplex circular audio buffer management over WebSockets to support real-time user speech interruption and eliminate audio packet drop under network jitter.
+- Engineered an asynchronous dual-channel ring buffer with edge Voice Activity Detection (VAD) over WebSockets to support instant barge-in and mitigate jitter-induced buffer underruns.
 
-LynkZen -- Instagram DM Automation SaaS | Chennai, India [lynkzen.in]
-Lead Engineer & Co-Founder | April 2026 -- June 2026
+LynkZen -- Instagram DM Automation SaaS                                              Chennai, India
+Lead Engineer & Co-Founder                                                   April 2026 -- June 2026
 - Built and launched an Instagram automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story reply routing, and custom keyword sequences.
 - Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels and automated response paths without writing code.
-- Onboarded 3,000 active beta users for closed private testing, engineering Redis queue handlers to throttle throughput and ensure 100% compliance with Meta Graph API rate limits.
+- Onboarded 3,000 active beta users for closed private testing, engineering sliding-window rate-limiting via atomic Redis Lua scripts to ensure 100% compliance with Meta Graph API quotas.
 
-================================================================================
-TECHNICAL PROJECTS
-================================================================================
-AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing | IEEE ICETEA 2026
-[GitHub: github.com/RAVINDRA8008]
+SELECTED TECHNICAL PROJECTS
+----------------------------------------------------------------------------------------------------
+AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing          IEEE ICETEA 2026
 - Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.
-- Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.
-- Evaluated classification performance across 4 emotion classes on standard benchmarks, achieving 82.55% accuracy, 0.83 macro F1-score, and 0.77 Cohen's kappa.
+- Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios against discriminator reward.
+- Evaluated on DEAP and SEED multimodal benchmarks across 4 emotion classes, achieving 82.55% accuracy (+7.4% over unimodal baselines), 0.83 macro F1-score, and 0.77 Cohen's kappa.
 
-SmartCap: Real-Time Subtitle Generation | Python, Whisper, FFmpeg | IEEE ICICV 2025
-[IEEE Xplore: ieeexplore.ieee.org/document/11085491]
+SmartCap: Real-Time Subtitle Generation | Python, Whisper, FFmpeg                    IEEE ICICV 2025
 - Built an automated audio-visual transcription tool using OpenAI Whisper, implementing word-level acoustic timestamp alignment to generate synchronized video subtitles (.srt/.vtt).
-- Engineered media preprocessing scripts using FFmpeg and Python multithreading to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.
+- Engineered an asynchronous media worker pipeline using FFmpeg stream filters to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.
 
-Smart QR-Based University Parking System | Flask, Python, Twilio API | IEEE CONIT 2025
-[IEEE Xplore: ieeexplore.ieee.org/document/11166870]
-- Developed a campus parking management application with dynamic, time-expiring cryptographic QR code generation for gate validation and Twilio OTP user authentication.
-- Implemented a lightweight Progressive Web App (PWA) with real-time slot occupancy tracking, achieving a 98.7% booking transaction success rate across evaluated trial simulations.
+Smart QR-Based University Parking System | Flask, Python, Twilio API                IEEE CONIT 2025
+- Developed a campus parking management application with HMAC-SHA256 signed dynamic QR code generation, timestamped nonces, and Twilio OTP user authentication.
+- Implemented a Progressive Web App (PWA) with real-time slot occupancy tracking and ACID row-level database locking, achieving a 98.7% booking transaction success rate during peak traffic simulations.
 
-================================================================================
 PUBLICATIONS
-================================================================================
-- IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG-Speech Emotion Recognition via Deep Reinforcement Learning" -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.
+----------------------------------------------------------------------------------------------------
+- IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG--Speech Emotion Recognition via Deep Reinforcement Learning" -- International Conference on Emerging Technologies in Engineering Applications, Co-Author.
 - IEEE ICICV 2025: "SmartCap: Real-Time Synchronized Subtitles for Videos" -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.
 - IEEE CONIT 2025: "Smart QR-Based University Parking Management System" -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.

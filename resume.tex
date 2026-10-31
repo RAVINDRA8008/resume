@@ -6,7 +6,7 @@
 
 \documentclass[letterpaper,10pt]{article}
 
-\usepackage[margin=0.40in, top=0.38in, bottom=0.36in]{geometry}
+\usepackage[margin=0.38in, top=0.36in, bottom=0.34in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[dvipsnames]{xcolor}
@@ -14,7 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{fontspec}
-\setmainfont{Segoe UI}
+\setmainfont{Calibri}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -61,7 +61,7 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2.5pt}\item
+  \vspace{-2.5pt}\item
     \begin{tabular*}{0.985\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \small#2 \\
     \end{tabular*}\vspace{-4pt}
@@ -81,11 +81,11 @@
 \begin{center}
     {\fontsize{19}{22}\selectfont \textbf{Ravindra Chowdary Jonnagadla}} \\ \vspace{2.5pt}
     \small
-    \href{mailto:ravindrachowdary8008@gmail.com}{ravindrachowdary8008@gmail.com} $|$ 
-    +91 9398151678 $|$ 
+    \href{mailto:ravindrachowdary8008@gmail.com}{ravindrachowdary8008@gmail.com} \enspace|\enspace
+    +91 9398151678 \enspace|\enspace
     Chennai, India \\ \vspace{1.5pt}
-    \href{https://linkedin.com/in/ravindrachowdary}{linkedin.com/in/ravindrachowdary} $|$ 
-    \href{https://github.com/RAVINDRA8008}{github.com/RAVINDRA8008} $|$ 
+    \href{https://linkedin.com/in/ravindrachowdary}{linkedin.com/in/ravindrachowdary} \enspace|\enspace
+    \href{https://github.com/RAVINDRA8008}{github.com/RAVINDRA8008} \enspace|\enspace
     \href{https://lynkzen.in}{lynkzen.in}
 \end{center}
 \vspace{-11pt}
@@ -103,9 +103,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.14in, label={}]
     \small{\item{
-     \textbf{Languages:} Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting \\ \vspace{1.5pt}
-     \textbf{AI \& Machine Learning:} PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO (RL), NLP \\ \vspace{1.5pt}
-     \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD, Git, Linux \\ \vspace{1.5pt}
+     \textbf{Languages:} Python, C++, SQL, PostgreSQL, MySQL, JavaScript, TypeScript, Bash, Shell Scripting \\ \vspace{1.5pt}
+     \textbf{AI \& Machine Learning:} PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO Reinforcement Learning, NLP \\ \vspace{1.5pt}
+     \textbf{Cloud \& DevOps:} AWS, Docker, Kubernetes, Terraform, CI/CD, GitHub Actions, Linux, Git \\ \vspace{1.5pt}
      \textbf{Backend \& Web:} FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Redis, Celery \\ \vspace{1.5pt}
      \textbf{Certifications:} AWS Certified Cloud Practitioner -- \href{https://www.credly.com/badges/3dc45737-a240-4ebd-865c-ac932ab9d71c/public_url}{Credly Verified Credential} (Badge ID: 3dc45737)
     }}
@@ -120,9 +120,9 @@
       {Waani -- Conversational Voice AI Platform}{Chennai, India}
       {Lead Engineer \& Co-Founder}{July 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Architected an end-to-end conversational voice agent integrating telephony protocols, streaming STT (Sarvam AI), and LLM inference, achieving $<$800ms latency for natural Hindi-English code-switching dialogs.}
+        \resumeItem{Architected an end-to-end voice agent integrating telephony protocols, streaming STT (Sarvam AI), and LLM inference, achieving $<$800ms p95 voice-to-voice turn-around time across 5,000+ simulated pilot calls.}
         \resumeItem{Engineered conversational state machines and dynamic intent branching for automated lead qualification and appointment scheduling, configuring automated fallback logic for human operator handoff.}
-        \resumeItem{Implemented duplex circular audio buffer management over WebSockets to support real-time user speech interruption and eliminate audio packet drop under network jitter.}
+        \resumeItem{Engineered an asynchronous dual-channel ring buffer with edge Voice Activity Detection (VAD) over WebSockets to support instant barge-in and mitigate jitter-induced buffer underruns.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -131,36 +131,36 @@
       \resumeItemListStart
         \resumeItem{Built and launched an Instagram automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story reply routing, and custom keyword sequences.}
         \resumeItem{Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels and automated response paths without writing code.}
-        \resumeItem{Onboarded \textbf{3,000 active beta users for closed private testing}, engineering Redis queue handlers to throttle throughput and ensure 100\% compliance with Meta Graph API rate limits.}
+        \resumeItem{Onboarded \textbf{3,000 active beta users for closed private testing}, engineering sliding-window rate-limiting via atomic Redis Lua scripts to ensure 100\% compliance with Meta Graph API quotas.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 \vspace{-6pt}
 
 %-----------TECHNICAL PROJECTS-----------
-\section{Technical Projects}
+\section{Selected Technical Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} $|$ \emph{PyTorch, Signal Processing}}{IEEE ICETEA 2026}
+      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} \enspace|\enspace \emph{PyTorch, Signal Processing}}{IEEE ICETEA 2026}
       \resumeItemListStart
         \resumeItem{Developed a multimodal emotion recognition pipeline combining raw EEG signals and speech features, implementing Cross-Modal Mutual Attention (CMMA) to capture inter-modal correlations.}
-        \resumeItem{Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG feature augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios.}
-        \resumeItem{Evaluated classification performance across 4 emotion classes on standard benchmarks, achieving \textbf{82.55\% accuracy}, \textbf{0.83 macro F1-score}, and \textbf{0.77 Cohen's kappa}.}
+        \resumeItem{Integrated Emotion-Aware Gating (EAG) with WGAN-GP for synthetic EEG augmentation, applying Proximal Policy Optimization (PPO) to dynamically calibrate synthetic-to-real sampling ratios against discriminator reward.}
+        \resumeItem{Evaluated on DEAP and SEED multimodal benchmarks across 4 emotion classes, achieving \textbf{82.55\% accuracy} (+7.4\% over unimodal baselines), \textbf{0.83 macro F1-score}, and \textbf{0.77 Cohen's kappa}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{SmartCap: Real-Time Subtitle Generation}} $|$ \emph{Python, Whisper, FFmpeg}}{\href{https://ieeexplore.ieee.org/document/11085491}{IEEE ICICV 2025}}
+      {\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{SmartCap: Real-Time Subtitle Generation}} \enspace|\enspace \emph{Python, Whisper, FFmpeg}}{\href{https://ieeexplore.ieee.org/document/11085491}{IEEE ICICV 2025}}
       \resumeItemListStart
         \resumeItem{Built an automated audio-visual transcription tool using OpenAI Whisper, implementing word-level acoustic timestamp alignment to generate synchronized video subtitles (.srt/.vtt).}
-        \resumeItem{Engineered media preprocessing scripts using FFmpeg and Python multithreading to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.}
+        \resumeItem{Engineered an asynchronous media worker pipeline using FFmpeg stream filters to isolate acoustic tracks, normalize dynamic audio levels, and burn formatted subtitles onto video.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{Smart QR-Based University Parking System}} $|$ \emph{Flask, Python, Twilio API}}{\href{https://ieeexplore.ieee.org/document/11166870}{IEEE CONIT 2025}}
+      {\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{Smart QR-Based University Parking System}} \enspace|\enspace \emph{Flask, Python, Twilio API}}{\href{https://ieeexplore.ieee.org/document/11166870}{IEEE CONIT 2025}}
       \resumeItemListStart
-        \resumeItem{Developed a campus parking management application with dynamic, time-expiring cryptographic QR code generation for gate validation and Twilio OTP user authentication.}
-        \resumeItem{Implemented a lightweight Progressive Web App (PWA) with real-time slot occupancy tracking, achieving a \textbf{98.7\% booking transaction success rate} across evaluated trial simulations.}
+        \resumeItem{Developed a campus parking management application with HMAC-SHA256 signed dynamic QR code generation, timestamped nonces, and Twilio OTP user authentication.}
+        \resumeItem{Implemented a Progressive Web App (PWA) with real-time slot occupancy tracking and ACID row-level database locking, achieving a \textbf{98.7\% booking transaction success rate} during peak traffic simulations.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -169,9 +169,9 @@
 %-----------PUBLICATIONS-----------
 \section{Publications}
   \resumeItemListStart
-    \resumeItem{\textbf{IEEE ICETEA 2026:} \emph{``Adaptive GAN-Augmented EEG--Speech Emotion Recognition via Deep Reinforcement Learning''} -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.}
-    \resumeItem{\textbf{IEEE ICICV 2025:} \href{https://ieeexplore.ieee.org/document/11085491}{\emph{``SmartCap: Real-Time Synchronized Subtitles for Videos''}} -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.}
-    \resumeItem{\textbf{IEEE CONIT 2025:} \href{https://ieeexplore.ieee.org/document/11166870}{\emph{``Smart QR-Based University Parking Management System''}} -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.}
+    \resumeItem{\textbf{IEEE ICETEA 2026:} ``Adaptive GAN-Augmented EEG--Speech Emotion Recognition via Deep Reinforcement Learning'' -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.}
+    \resumeItem{\textbf{IEEE ICICV 2025:} \href{https://ieeexplore.ieee.org/document/11085491}{``SmartCap: Real-Time Synchronized Subtitles for Videos''} -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.}
+    \resumeItem{\textbf{IEEE CONIT 2025:} \href{https://ieeexplore.ieee.org/document/11166870}{``Smart QR-Based University Parking Management System''} -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.}
   \resumeItemListEnd
 
 %-------------------------------------------
