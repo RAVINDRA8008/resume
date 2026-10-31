@@ -11,7 +11,7 @@ linkedin.com/in/ravindrachowdary
 Professional Experience
 Waani – Conversational Voice AI Platform
 Chennai, India
-Co-Founder & Lead Engineer
+Founder & Lead Engineer
 July 2026 – Present
 • Architected an ultra-low-latency duplex voice pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token
 inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ concurrent voice sessions.
