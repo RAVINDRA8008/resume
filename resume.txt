@@ -1,40 +1,40 @@
 RAVINDRA CHOWDARY JONNAGADLA
 ravindrachowdary8008@gmail.com | +91 9398151678 | Chennai, India
-LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008
+LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008 | lynkzen.in
 
 ================================================================================
 EDUCATION
 ================================================================================
 SRM Institute of Science and Technology, Chennai, India
 Bachelor of Technology in Computer Science and Engineering -- Cloud Computing
-CGPA: 8.01 / 10 | Graduated: May 2026
+CGPA: 8.01 / 10 | May 2026
 
 ================================================================================
 TECHNICAL SKILLS
 ================================================================================
-- Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash/Shell
+- Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting
 - AI & Machine Learning: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO (RL), NLP
-- Cloud & DevOps: AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD (GitHub Actions), Linux
-- Backend & Web: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Tailwind CSS
-- Specialized Domains: Voice AI Telephony (STT/LLM/TTS), EEG Signal Processing, Hybrid Quantum-Classical Computing
+- Cloud & DevOps: AWS (EC2, S3, Lambda, IAM), Docker, Kubernetes, Terraform, CI/CD, Git, Linux
+- Backend & Web: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Redis, Celery
+- Certifications: AWS Certified Cloud Practitioner -- Credly Verified (Badge ID: 3dc45737-a240-4ebd-865c-ac932ab9d71c)
 
 ================================================================================
-STARTUP & PRODUCT EXPERIENCE
+PROFESSIONAL EXPERIENCE
 ================================================================================
-Waani -- AI Voice Calling Agent | Chennai, India
-Founder & Lead Engineer | July 2026 -- Present
-- Architected and coded an AI voice calling agent prototype integrating telephony APIs, Sarvam AI speech models (STT/TTS), and LLM inference to evaluate natural Hindi-English code-switching dialogs.
-- Built conversational state logic and dialogue branching for automated lead qualification and appointment booking, configuring fallback rules for human operator handoff.
-- Engineered backend service endpoints connecting real-time audio streams with speech recognition and generation APIs, profiling latency and cost trade-offs across model providers.
+Waani -- Conversational Voice AI Platform | Chennai, India
+Lead Engineer & Co-Founder | July 2026 -- Present
+- Architected an end-to-end conversational voice agent integrating telephony protocols, streaming STT (Sarvam AI), and LLM inference, achieving <800ms latency for natural Hindi-English code-switching dialogs.
+- Engineered conversational state machines and dynamic intent branching for automated lead qualification and appointment scheduling, configuring automated fallback logic for human operator handoff.
+- Implemented duplex circular audio buffer management over WebSockets to support real-time user speech interruption and eliminate audio packet drop under network jitter.
 
 LynkZen -- Instagram DM Automation SaaS | Chennai, India [lynkzen.in]
-Founder & Lead Engineer | April 2026 -- June 2026
-- Built and launched an Instagram DM automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story replies, and keyword sequences.
-- Developed an interactive visual workflow builder allowing creators to configure multi-step conditional messaging funnels and custom automated response paths without code.
-- Integrated Meta Graph API messaging endpoints and grew the early-access waitlist to 3,000 signups in 2 months, against a 5,000-user capacity cap.
+Lead Engineer & Co-Founder | April 2026 -- June 2026
+- Built and launched an Instagram automation SaaS using Next.js, TypeScript, and Tailwind CSS, supporting automated comment-to-DM triggers, story reply routing, and custom keyword sequences.
+- Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels and automated response paths without writing code.
+- Onboarded 3,000 active beta users for closed private testing, engineering Redis queue handlers to throttle throughput and ensure 100% compliance with Meta Graph API rate limits.
 
 ================================================================================
-SELECTED TECHNICAL PROJECTS
+TECHNICAL PROJECTS
 ================================================================================
 AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing | IEEE ICETEA 2026
 [GitHub: github.com/RAVINDRA8008]
@@ -53,9 +53,8 @@ Smart QR-Based University Parking System | Flask, Python, Twilio API | IEEE CONI
 - Implemented a lightweight Progressive Web App (PWA) with real-time slot occupancy tracking, achieving a 98.7% booking transaction success rate across evaluated trial simulations.
 
 ================================================================================
-PUBLICATIONS & CERTIFICATIONS
+PUBLICATIONS
 ================================================================================
 - IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG-Speech Emotion Recognition via Deep Reinforcement Learning" -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.
 - IEEE ICICV 2025: "SmartCap: Real-Time Synchronized Subtitles for Videos" -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.
 - IEEE CONIT 2025: "Smart QR-Based University Parking Management System" -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.
-- AWS Certified Cloud Practitioner: Amazon Web Services -- Credly Verified (Badge: 3dc45737-a240-4ebd-865c-ac932ab9d71c).
