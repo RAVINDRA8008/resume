@@ -1,48 +1,69 @@
-RAVINDRA CHOWDARY JONNAGADLA
-Chennai, India | +91 9398151678 | ravindrachowdary8008@gmail.com
-LinkedIn: linkedin.com/in/ravindrachowdary | GitHub: github.com/RAVINDRA8008 | SaaS: lynkzen.in
-
-EDUCATION
-----------------------------------------------------------------------------------------------------
-SRM Institute of Science and Technology, Chennai, India
-B.Tech in Computer Science and Engineering -- Cloud Computing (CGPA: 8.01/10)
-Graduation Date: May 2026
-
-TECHNICAL SKILLS
-----------------------------------------------------------------------------------------------------
-- Languages: Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting
-- AI/ML & Research: PyTorch, TensorFlow, Scikit-learn, Hugging Face, NumPy, Pandas, SciPy, WGAN-GP, Reinforcement Learning (PPO), NLP, Multimodal Learning, EEG Signal Processing
-- Generative AI & Speech: Whisper, Faster-Whisper, Sentence Transformers, ONNX Runtime, Model Quantization, FFmpeg, MoviePy, STT/TTS, Retrieval-Augmented Generation (RAG)
-- Backend & Systems: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, WebSockets, Redis, BullMQ, Celery, Microservices, Browser Automation (Selenium), YouTube Data API
-- Cloud & DevOps: AWS (EC2, S3, Lambda, IAM), Cloudflare R2, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Git, Prometheus, Grafana
-- Data & Search: ChromaDB, BM25, Elasticsearch, Logstash, Kibana, ETL Pipelines, Vector Search
-- Certifications: Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909) | AWS Certified Cloud Practitioner
-
-PROFESSIONAL EXPERIENCE
-----------------------------------------------------------------------------------------------------
-Waani -- Conversational Voice AI Platform                                             Chennai, India
-Lead Engineer & Co-Founder                                                      July 2026 -- Present
-- Architected an ultra-low-latency duplex voice agent pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ synthetic concurrent voice sessions.
-- Engineered conversational state machines and dynamic intent branching for automated lead qualification and appointment scheduling, configuring automated fallback logic for human operator handoff.
-- Built an asynchronous dual-channel audio ring buffer with edge Voice Activity Detection (VAD) over WebSockets, implementing atomic cancellation tokens to flush in-flight TTS buffers on instant user barge-in.
-
-LynkZen -- Instagram DM Automation SaaS                                              Chennai, India
-Founding Engineer & Builder                                                  April 2026 -- June 2026
-- Built and launched an event-driven Instagram automation engine using Next.js, TypeScript, and Tailwind CSS, decoupling webhook ingest via asynchronous worker queues to absorb 10k+ burst events from comment-to-DM triggers and story replies.
-- Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels and custom automated response paths without writing code.
-- Scaled platform to 3,000 active beta signups for closed testing, implementing token-bucket rate limiting via atomic Redis Lua scripts to eliminate race conditions and guarantee zero 429 quota violations against Meta Graph API limits.
-
-PEER-REVIEWED RESEARCH & TECHNICAL PROJECTS
-----------------------------------------------------------------------------------------------------
-AMERS: Multimodal Emotion Recognition System | PyTorch, Signal Processing          IEEE ICETEA 2026
-- Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.
-- Integrated an Emotion-Aware Gating (EAG) WGAN-GP generator with a PPO reinforcement learning controller, dynamically scheduling synthetic-to-real training batches against discriminator reward stability.
-- Evaluated on DEAP and SEED benchmarks under Leave-One-Subject-Out (LOSO) cross-validation across 4 emotion classes, achieving 82.55% accuracy (+7.4% over unimodal baselines), 0.83 macro F1-score, and 0.77 Cohen's kappa.
-
-SmartCap: Automated Subtitle & Transcoding Pipeline | Python, Whisper, FFmpeg        IEEE ICICV 2025
-- Built an automated transcription engine combining OpenAI Whisper with acoustic timestamp alignment to generate frame-accurate synchronized video subtitles (.srt/.vtt); published as Sole/Lead Author (IEEE Xplore Doc ID: 11085491).
-- Architected an asynchronous worker pipeline orchestrating FFmpeg stream filters for dynamic audio normalization and hardcoded subtitle burning, isolating CPU-bound transcoding to achieve a 0.35x Real-Time Factor (RTF).
-
-Smart QR-Based University Parking System | Flask, Python, PostgreSQL, Twilio API    IEEE CONIT 2025
-- Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in Redis to prevent replay attacks, and Twilio OTP verification; published as Co-Author (IEEE Xplore Doc ID: 11166870).
-- Engineered slot reservation concurrency using optimistic row-level locking with versioning in PostgreSQL, maintaining zero double-booking anomalies and 99.8% transaction integrity under simulated 1,000-user rush-hour contention.
+Ravindra Chowdary Jonnagadla
+ravindrachowdary8008@gmail.com
+| +91 9398151678
+| Chennai, India
+linkedin.com/in/ravindrachowdary
+| github.com/RAVINDRA8008
+| lynkzen.in
+Education
+SRM Institute of Science and Technology
+Chennai, India
+B.Tech in Computer Science and Engineering – Cloud Computing (CGPA: 8.01/10)
+May 2026
+Technical Skills
+Languages: Python, C++, SQL, PostgreSQL, MySQL, JavaScript, TypeScript, Bash, Shell Scripting
+AI/ML & Research: PyTorch, TensorFlow, Scikit-learn, Hugging Face, Multimodal Learning, WGAN-GP, Reinforcement Learning, PPO,
+NLP, EEG Signal Processing, Vector Search, ChromaDB
+Generative AI & Speech: Whisper, Faster-Whisper, ONNX Runtime, Model Quantization, Sentence Transformers, RAG, FFmpeg,
+Audio/Speech Processing (STT/TTS)
+Backend & Systems: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, WebSockets, Redis, BullMQ, Celery, Microservices
+Architecture
+Cloud, DevOps & Observability: AWS (EC2, S3, Lambda, IAM), Cloudflare R2, Docker, Kubernetes, Terraform, GitHub Actions, Linux,
+Git, Prometheus, Grafana
+Certifications: Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909)
+| AWS Certified Cloud Practitioner
+Professional Experience
+Waani – Conversational Voice AI Platform
+Chennai, India
+Co-Founder & Lead Engineer
+July 2026 – Present
+• Architected an ultra-low-latency duplex voice pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token
+inference, achieving <800ms p95 voice-to-voice turn-around time across 5,000+ synthetic concurrent voice sessions.
+• Engineered conversational state machines and dynamic intent branching for automated lead qualification, instrumenting Prometheus
+metrics and Grafana dashboards to track streaming audio packet jitter and queue depth.
+• Built an asynchronous dual-channel audio ring buffer with edge Voice Activity Detection (VAD) over WebSockets, implementing atomic
+cancellation tokens to flush in-flight TTS buffers on instant user barge-in.
+LynkZen – Instagram DM Automation SaaS
+Chennai, India
+Founding Engineer
+April 2026 – June 2026
+• Built and launched an event-driven Instagram automation engine using Next.js, TypeScript, and Tailwind CSS, decoupling webhook
+ingest via BullMQ asynchronous worker queues to absorb 10k+ burst events.
+• Developed an interactive node-based visual workflow builder allowing creators to configure multi-step conditional messaging funnels
+and automated response paths without writing code.
+• Scaled platform to 3,000 active beta signups for closed testing, implementing token-bucket rate limiting via atomic Redis Lua scripts
+to eliminate race conditions and guarantee zero 429 quota violations against Meta Graph API limits.
+Technical Projects & Research
+AMERS: Multimodal Emotion Recognition System
+| PyTorch, Signal Processing
+IEEE ICETEA 2026
+• Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via
+Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.
+• Integrated an Emotion-Aware Gating (EAG) WGAN-GP generator with a PPO reinforcement learning controller, dynamically scheduling
+synthetic-to-real training batches against discriminator reward stability.
+• Evaluated on DEAP and SEED benchmarks under Leave-One-Subject-Out (LOSO) cross-validation across 4 emotion classes,
+achieving 82.55% accuracy (+7.4% over unimodal baselines), 0.83 macro F1-score, and 0.77 Cohen Kappa score.
+SmartCap: Automated Subtitle & Transcoding Pipeline
+| Python, Whisper, FFmpeg, ONNX
+IEEE ICICV 2025 (Doc ID: 11085491)
+• Built an automated transcription pipeline combining Whisper with acoustic timestamp alignment for frame-accurate subtitles (.srt/.vtt),
+quantizing models to INT8 via ONNX Runtime to achieve a 0.35x Real-Time Factor (RTF), published as Lead Author.
+• Architected an asynchronous worker pipeline orchestrating FFmpeg stream filters for dynamic audio normalization and hardcoded
+subtitle burning, isolating CPU-bound transcoding to eliminate event-loop starvation.
+Smart QR-Based University Parking System
+| Flask, Python, PostgreSQL, Redis
+IEEE CONIT 2025 (Doc ID: 11166870)
+• Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in
+Redis to prevent replay attacks, and Twilio OTP verification, published as Co-Author.
+• Engineered slot reservation concurrency using optimistic row-level locking with versioning in PostgreSQL, maintaining zero
+double-booking anomalies and 99.8% transaction integrity under simulated 1,000-user rush-hour contention.
