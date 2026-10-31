@@ -55,7 +55,7 @@ Smart QR-Based University Parking System | Flask, Python, Twilio API | IEEE CONI
 ================================================================================
 PUBLICATIONS & CERTIFICATIONS
 ================================================================================
-- IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG-Speech Emotion Recognition via Deep Reinforcement Learning" -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author (R. C. Jonnagadla, V. Niketh, R. Naresh).
+- IEEE ICETEA 2026: "Adaptive GAN-Augmented EEG-Speech Emotion Recognition via Deep Reinforcement Learning" -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.
 - IEEE ICICV 2025: "SmartCap: Real-Time Synchronized Subtitles for Videos" -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.
-- IEEE CONIT 2025: "Smart QR-Based University Parking Management System..." -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.
+- IEEE CONIT 2025: "Smart QR-Based University Parking Management System" -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.
 - AWS Certified Cloud Practitioner: Amazon Web Services -- Credly Verified (Badge: 3dc45737-a240-4ebd-865c-ac932ab9d71c).
