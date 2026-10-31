@@ -14,7 +14,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{fontspec}
-\setmainfont{Arial}
+\setmainfont{Segoe UI}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -27,22 +27,26 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Monochrome Palette (Timeless High-Contrast Black & Crisp Rules)
-\definecolor{primary}{RGB}{0, 0, 0}         % Pure Black for headings & emphasis
-\definecolor{secondary}{RGB}{50, 50, 50}    % Deep Neutral for metadata & dates
-\definecolor{linkcolor}{RGB}{0, 0, 0}       % Elegant Black for hyperlinks (clickable, zero blue tint)
-\definecolor{rulecolor}{RGB}{40, 40, 40}    % Crisp dark rule divider
+% Modern Executive Palette (High-Contrast Black & Sleek Slate Divider)
+\definecolor{primary}{RGB}{15, 23, 42}        % Deep Obsidian Slate (softer on eyes than harsh stark black)
+\definecolor{secondary}{RGB}{71, 85, 105}     % Slate for metadata & dates
+\definecolor{linkcolor}{RGB}{15, 23, 42}      % Clean Slate for links (zero loud color)
+\definecolor{rulecolor}{RGB}{148, 163, 184}   % Crisp subtle divider rule
 
 \hypersetup{
     colorlinks=true,
     linkcolor=linkcolor,
-    urlcolor=linkcolor
+    urlcolor=linkcolor,
+    pdfauthor={Ravindra Chowdary Jonnagadla},
+    pdftitle={Ravindra Chowdary Jonnagadla - Software Engineer and AI Researcher Resume},
+    pdfsubject={Software Engineering, Multimodal AI, Deep Learning, Cloud Systems},
+    pdfkeywords={Software Engineer, AI Researcher, Machine Learning, PyTorch, Multimodal, Deep Learning, IEEE, AWS Certified, Reinforcement Learning, PPO, WGAN-GP, Whisper, FastAPI, Next.js, Python, C++, Distributed Systems}
 }
 
 % Section Titles with Sleek Accents
 \titleformat{\section}{
   \vspace{-7pt}\color{primary}\raggedright\large\bfseries
-}{}{0em}{}[\color{rulecolor}{\titlerule[0.7pt]} \vspace{-4pt}]
+}{}{0em}{}[\color{rulecolor}{\titlerule[0.45pt]} \vspace{-4pt}]
 
 % Custom commands for bulleted lists and subheadings
 \newcommand{\resumeItem}[1]{
