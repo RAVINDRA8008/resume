@@ -6,7 +6,7 @@
 
 \documentclass[letterpaper,10pt]{article}
 
-\usepackage[margin=0.38in, top=0.36in, bottom=0.34in]{geometry}
+\usepackage[margin=0.35in, top=0.32in, bottom=0.30in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage[dvipsnames]{xcolor}
@@ -39,7 +39,7 @@
     pdfauthor={Ravindra Chowdary Jonnagadla},
     pdftitle={Ravindra Chowdary Jonnagadla - Software Engineer and AI Researcher Resume},
     pdfsubject={Software Engineering, Multimodal AI, Deep Learning, Cloud Systems, Database Architecture},
-    pdfkeywords={Software Engineer, AI Researcher, Machine Learning, PyTorch, Multimodal, Deep Learning, IEEE, MySQL 8.0 Database Developer, AWS Certified, Reinforcement Learning, PPO, WGAN-GP, Whisper, FastAPI, Next.js, Python, C++, Distributed Systems}
+    pdfkeywords={Software Engineer, AI Researcher, Machine Learning, PyTorch, Multimodal, Deep Learning, IEEE, MySQL 8.0 Database Developer, AWS Certified, Reinforcement Learning, PPO, WGAN-GP, Whisper, FastAPI, Next.js, Python, C++, Distributed Systems, RAG, Vector Search}
 }
 
 % Section Titles with Sleek Pure Black Divider
@@ -103,10 +103,12 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.14in, label={}]
     \small{\item{
-     \textbf{Languages:~}Python, C++, SQL, PostgreSQL, MySQL, JavaScript, TypeScript, Bash, Shell Scripting \\ \vspace{1.5pt}
-     \textbf{AI \& Machine Learning:~}PyTorch, TensorFlow, Scikit-learn, Hugging Face, Whisper, WGAN-GP, PPO Reinforcement Learning, NLP \\ \vspace{1.5pt}
-     \textbf{Databases \& Backend:~}FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, Microservices, Redis, Celery, Query Optimization \\ \vspace{1.5pt}
-     \textbf{Cloud \& DevOps:~}AWS, Docker, Kubernetes, Terraform, CI/CD, GitHub Actions, Linux, Git \\ \vspace{1.5pt}
+     \textbf{Languages:~}Python, C++, SQL (PostgreSQL, MySQL), JavaScript, TypeScript, Bash, Shell Scripting \\ \vspace{1.5pt}
+     \textbf{AI/ML \& Research:~}PyTorch, TensorFlow, Scikit-learn, Hugging Face, NumPy, Pandas, SciPy, WGAN-GP, Reinforcement Learning (PPO), NLP, Multimodal Learning, EEG Signal Processing \\ \vspace{1.5pt}
+     \textbf{Generative AI \& Speech:~}Whisper, Faster-Whisper, Sentence Transformers, ONNX Runtime, Model Quantization, FFmpeg, MoviePy, STT/TTS, Retrieval-Augmented Generation (RAG) \\ \vspace{1.5pt}
+     \textbf{Backend \& Systems:~}FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, WebSockets, Redis, BullMQ, Celery, Microservices, Browser Automation (Selenium), YouTube Data API \\ \vspace{1.5pt}
+     \textbf{Cloud \& DevOps:~}AWS (EC2, S3, Lambda, IAM), Cloudflare R2, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Git, Prometheus, Grafana \\ \vspace{1.5pt}
+     \textbf{Data \& Search:~}ChromaDB, BM25, Elasticsearch, Logstash, Kibana, ETL Pipelines, Vector Search \\ \vspace{1.5pt}
      \textbf{Certifications:~}\href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=612702728476686D7B2D24830AC8D7769D0C9345E82B11C94343869FEEB8DF92}{Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909)} \enspace|\enspace \href{https://www.credly.com/badges/3dc45737-a240-4ebd-865c-ac932ab9d71c/public_url}{AWS Certified Cloud Practitioner}
     }}
  \end{itemize}
@@ -120,7 +122,7 @@
       {Waani -- Conversational Voice AI Platform}{Chennai, India}
       {Lead Engineer \& Co-Founder}{July 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Architected an ultra-low-latency duplex voice agent pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token inference, achieving \textbf{$<$800ms p95 voice-to-voice turn-around time} across 5,000+ synthetic concurrent voice sessions.}
+        \resumeItem{Architected an ultra-low-latency duplex voice pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token inference, achieving \textbf{$<$800ms p95 voice-to-voice turn-around time} across 5,000+ synthetic concurrent voice sessions.}
         \resumeItem{Engineered conversational state machines and dynamic intent branching for automated lead qualification and appointment scheduling, configuring automated fallback logic for human operator handoff.}
         \resumeItem{Built an asynchronous dual-channel audio ring buffer with edge Voice Activity Detection (VAD) over WebSockets, implementing atomic cancellation tokens to flush in-flight TTS buffers on instant user barge-in.}
       \resumeItemListEnd
@@ -137,42 +139,33 @@
   \resumeSubHeadingListEnd
 \vspace{-6pt}
 
-%-----------TECHNICAL PROJECTS-----------
-\section{Technical Projects}
+%-----------TECHNICAL PROJECTS & PUBLICATIONS-----------
+\section{Peer-Reviewed Research \& Technical Projects}
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
-      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} \enspace|\enspace \emph{PyTorch, Signal Processing}}{IEEE ICETEA 2026}
+      {\href{https://github.com/RAVINDRA8008}{\textbf{AMERS: Multimodal Emotion Recognition System}} \enspace|\enspace \emph{PyTorch, Signal Processing}}{\textbf{IEEE ICETEA 2026}}
       \resumeItemListStart
         \resumeItem{Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.}
         \resumeItem{Integrated an Emotion-Aware Gating (EAG) WGAN-GP generator with a PPO reinforcement learning controller, dynamically scheduling synthetic-to-real training batches against discriminator reward stability.}
-        \resumeItem{Evaluated on DEAP and SEED multimodal benchmarks under Leave-One-Subject-Out (LOSO) cross-validation across 4 emotion classes, achieving \textbf{82.55\% accuracy} (+7.4\% over unimodal baselines), \textbf{0.83 macro F1-score}, and \textbf{0.77 Cohen's kappa}.}
+        \resumeItem{Evaluated on DEAP and SEED benchmarks under Leave-One-Subject-Out (LOSO) cross-validation across 4 emotion classes, achieving \textbf{82.55\% accuracy} (+7.4\% over unimodal baselines), \textbf{0.83 macro F1-score}, and \textbf{0.77 Cohen's kappa}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{SmartCap: Automated Subtitle \& Transcoding Pipeline}} \enspace|\enspace \emph{Python, Whisper, FFmpeg}}{\href{https://ieeexplore.ieee.org/document/11085491}{IEEE ICICV 2025}}
+      {\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{SmartCap: Automated Subtitle \& Transcoding Pipeline}} \enspace|\enspace \emph{Python, Whisper, FFmpeg}}{\href{https://ieeexplore.ieee.org/document/11085491}{\textbf{IEEE ICICV 2025} (Doc ID: 11085491)}}
       \resumeItemListStart
-        \resumeItem{Built an automated transcription engine combining OpenAI Whisper with acoustic timestamp alignment to generate frame-accurate synchronized video subtitles (.srt/.vtt).}
+        \resumeItem{Built an automated transcription engine combining OpenAI Whisper with acoustic timestamp alignment to generate frame-accurate synchronized video subtitles (.srt/.vtt); published as Sole/Lead Author.}
         \resumeItem{Architected an asynchronous worker pipeline orchestrating FFmpeg stream filters for dynamic audio normalization and hardcoded subtitle burning, isolating CPU-bound transcoding to achieve a \textbf{0.35x Real-Time Factor (RTF)}.}
       \resumeItemListEnd
 
     \resumeProjectHeading
-      {\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{Smart QR-Based University Parking System}} \enspace|\enspace \emph{Flask, Python, PostgreSQL, Twilio API}}{\href{https://ieeexplore.ieee.org/document/11166870}{IEEE CONIT 2025}}
+      {\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{Smart QR-Based University Parking System}} \enspace|\enspace \emph{Flask, Python, PostgreSQL, Twilio API}}{\href{https://ieeexplore.ieee.org/document/11166870}{\textbf{IEEE CONIT 2025} (Doc ID: 11166870)}}
       \resumeItemListStart
-        \resumeItem{Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in Redis to prevent replay attacks, and Twilio OTP verification.}
+        \resumeItem{Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in Redis to prevent replay attacks, and Twilio OTP verification; published as Co-Author.}
         \resumeItem{Engineered slot reservation concurrency using optimistic row-level locking with versioning in PostgreSQL, maintaining \textbf{zero double-booking anomalies and 99.8\% transaction integrity} under simulated 1,000-user rush-hour contention.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-\vspace{-6pt}
-
-%-----------PUBLICATIONS-----------
-\section{Publications}
-  \resumeItemListStart
-    \resumeItem{\textbf{IEEE ICETEA 2026:} ``Adaptive GAN-Augmented EEG--Speech Emotion Recognition via Deep Reinforcement Learning'' -- Int. Conf. on Emerging Technologies in Engineering Applications, Co-Author.}
-    \resumeItem{\textbf{IEEE ICICV 2025:} \href{https://ieeexplore.ieee.org/document/11085491}{``SmartCap: Real-Time Synchronized Subtitles for Videos''} -- Published in IEEE Xplore (Doc ID: 11085491), Sole/Lead Author.}
-    \resumeItem{\textbf{IEEE CONIT 2025:} \href{https://ieeexplore.ieee.org/document/11166870}{``Smart QR-Based University Parking Management System''} -- Published in IEEE Xplore (Doc ID: 11166870), Co-Author.}
-  \resumeItemListEnd
 
 %-------------------------------------------
 \end{document}
