@@ -17,7 +17,6 @@ NLP, EEG Signal Processing, Vector Search, ChromaDB
 Generative AI & Speech: Whisper, Faster-Whisper, ONNX Runtime, Model Quantization, Sentence Transformers, RAG, FFmpeg,
 Audio/Speech Processing (STT/TTS)
 Backend & Systems: FastAPI, Flask, Django, Node.js, Next.js, React, RESTful APIs, WebSockets, Redis, BullMQ, Celery, Microservices
-Architecture
 Cloud, DevOps & Observability: AWS (EC2, S3, Lambda, IAM), Cloudflare R2, Docker, Kubernetes, Terraform, GitHub Actions, Linux,
 Git, Prometheus, Grafana
 Certifications: Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909)
