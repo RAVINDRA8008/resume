@@ -165,7 +165,7 @@ def generate_student_docx():
 
     p_sub = doc.add_paragraph()
     format_para(p_sub, before=0.0, after=3.0)
-    run_sub = p_sub.add_run("Computer Science Undergraduate  •  AI Systems Researcher")
+    run_sub = p_sub.add_run("Computer Science Graduate  •  AI Systems Researcher")
     run_sub.font.name = "Arial"
     run_sub.font.size = Pt(10.0)
     run_sub.font.color.rgb = COLOR_SLATE
@@ -206,7 +206,7 @@ def generate_student_docx():
     )
     add_tab_heading(
         left_runs=[("B.Tech in Computer Science and Engineering – Specialization in Cloud Computing", False, True, COLOR_CARBON)],
-        right_runs=[("Expected May 2026", False, False, COLOR_SLATE)],
+        right_runs=[("May 2026", False, False, COLOR_SLATE)],
         before=0.0, after=1.5
     )
     add_bullet_item([
