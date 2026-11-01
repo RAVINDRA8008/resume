@@ -21,7 +21,7 @@ metrics and Grafana dashboards to track streaming audio packet jitter and queue 
 cancellation tokens to flush in-flight TTS buffers on instant user barge-in.
 LynkZen – Instagram DM Automation SaaS
 Chennai, India
-Founding Engineer
+Founder & Lead Engineer
 April 2026 – June 2026
 • Built and launched an event-driven Instagram automation engine using Next.js, TypeScript, and Tailwind CSS, decoupling webhook
 ingest via BullMQ asynchronous worker queues to absorb bursts of 10k+ concurrent webhook events.

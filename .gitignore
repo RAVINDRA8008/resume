@@ -9,3 +9,4 @@ bin/
 *.zip
 .claude/
 skills-lock.json
+~$*.docx

@@ -9,12 +9,12 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 def create_resume():
     doc = docx.Document()
 
-    # 1. Page Margins & Setup (US Letter, 0.40in sides, 0.32in top/bottom)
+    # 1. Page Margins & Setup (US Letter, 0.40in sides, 0.32in top, 0.30in bottom)
     for section in doc.sections:
         section.page_width = Inches(8.5)
         section.page_height = Inches(11.0)
         section.top_margin = Inches(0.32)
-        section.bottom_margin = Inches(0.32)
+        section.bottom_margin = Inches(0.30)
         section.left_margin = Inches(0.40)
         section.right_margin = Inches(0.40)
 
@@ -29,14 +29,14 @@ def create_resume():
     HEX_SLATE = "4B5563"
 
     # Helper: Set paragraph spacing
-    def format_para(p, before=0.0, after=0.0, line_spacing=1.04, align=WD_ALIGN_PARAGRAPH.LEFT):
+    def format_para(p, before=0.0, after=0.0, line_spacing=1.06, align=WD_ALIGN_PARAGRAPH.LEFT):
         p.alignment = align
         p.paragraph_format.space_before = Pt(before)
         p.paragraph_format.space_after = Pt(after)
         p.paragraph_format.line_spacing = line_spacing
 
     # Helper: Add hyperlink with styling
-    def add_hyperlink(paragraph, url, text, color=HEX_CARBON, bold=False, italic=False, size_pt=9.2):
+    def add_hyperlink(paragraph, url, text, color=HEX_CARBON, bold=False, italic=False, size_pt=9.4):
         part = paragraph.part
         r_id = part.relate_to(url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
         hyperlink = parse_xml(f'<w:hyperlink {nsdecls("w")} r:id="{r_id}" {nsdecls("r")}/>')
@@ -69,20 +69,20 @@ def create_resume():
     # Helper: Section Header with Hairline Bottom Border (0.5pt in #D1D5DB)
     def add_section_header(title):
         p = doc.add_paragraph()
-        format_para(p, before=4.5, after=2.0, line_spacing=1.0)
+        format_para(p, before=7.0, after=3.2, line_spacing=1.0)
         run = p.add_run(title)
         run.font.name = "Arial"
-        run.font.size = Pt(11.5)
+        run.font.size = Pt(12.0)
         run.font.bold = True
         run.font.color.rgb = COLOR_CARBON
         
         # Add 0.5pt bottom border in #D1D5DB
         pPr = p._p.get_or_add_pPr()
-        pBdr = parse_xml(f'<w:pBdr {nsdecls("w")}><w:bottom w:val="single" w:sz="4" w:space="1" w:color="{COLOR_BORDER_HEX}"/></w:pBdr>')
+        pBdr = parse_xml(f'<w:pBdr {nsdecls("w")}><w:bottom w:val="single" w:sz="4" w:space="2" w:color="{COLOR_BORDER_HEX}"/></w:pBdr>')
         pPr.append(pBdr)
 
     # Helper: Native 2-Column Heading using Right Tab Stop (NO TABLES!)
-    def add_tab_heading(left_runs, right_runs, before=2.0, after=0.8, size_pt=9.3):
+    def add_tab_heading(left_runs, right_runs, before=3.2, after=1.4, size_pt=9.6):
         p = doc.add_paragraph()
         format_para(p, before=before, after=after, line_spacing=1.0)
         p.paragraph_format.tab_stops.add_tab_stop(RIGHT_TAB_POS, WD_TAB_ALIGNMENT.RIGHT)
@@ -123,75 +123,75 @@ def create_resume():
     # Helper: Bullet point with bold highlights (exact 2-line couplets)
     def add_bullet_item(run_specs):
         p = doc.add_paragraph()
-        format_para(p, before=0.0, after=1.2, line_spacing=1.04)
+        format_para(p, before=0.0, after=3.0, line_spacing=1.06)
         p.paragraph_format.left_indent = Inches(0.14)
         p.paragraph_format.first_line_indent = Inches(-0.10)
         
         # Bullet glyph
         bullet_run = p.add_run("•  ")
         bullet_run.font.name = "Arial"
-        bullet_run.font.size = Pt(8.2)
+        bullet_run.font.size = Pt(8.5)
         bullet_run.font.color.rgb = COLOR_SLATE
         
         for item in run_specs:
             if isinstance(item, tuple) and item[0] == "link":
                 _, url, text, bold = item
-                add_hyperlink(p, url, text, color=HEX_CARBON, bold=bold, size_pt=9.1)
+                add_hyperlink(p, url, text, color=HEX_CARBON, bold=bold, size_pt=9.4)
             else:
                 text, bold = item
                 r = p.add_run(text)
                 r.font.name = "Arial"
-                r.font.size = Pt(9.1)
+                r.font.size = Pt(9.4)
                 r.font.bold = bold
                 r.font.color.rgb = COLOR_CARBON
 
     # ==================== HEADER ====================
     # Name
     p_name = doc.add_paragraph()
-    format_para(p_name, before=0.0, after=1.5)
+    format_para(p_name, before=0.0, after=2.5)
     run_name = p_name.add_run("Ravindra Chowdary Jonnagadla")
     run_name.font.name = "Arial"
-    run_name.font.size = Pt(20.0)
+    run_name.font.size = Pt(21.0)
     run_name.font.bold = True
     run_name.font.color.rgb = COLOR_CARBON
 
     # Subtitle
     p_sub = doc.add_paragraph()
-    format_para(p_sub, before=0.0, after=2.5)
+    format_para(p_sub, before=0.0, after=3.5)
     run_sub = p_sub.add_run("AI Systems Engineer  •  Machine Learning Researcher")
     run_sub.font.name = "Arial"
-    run_sub.font.size = Pt(10.0)
+    run_sub.font.size = Pt(10.5)
     run_sub.font.bold = False
     run_sub.font.color.rgb = COLOR_SLATE
 
     # Contact Line 1
     p_c1 = doc.add_paragraph()
-    format_para(p_c1, before=0.0, after=1.2)
+    format_para(p_c1, before=0.0, after=2.0)
     r = p_c1.add_run("Chennai, India  •  +91 9398151678  •  ")
     r.font.name = "Arial"
-    r.font.size = Pt(8.8)
+    r.font.size = Pt(9.0)
     r.font.color.rgb = COLOR_SLATE
-    add_hyperlink(p_c1, "mailto:ravindrachowdary8008@gmail.com", "ravindrachowdary8008@gmail.com", color=HEX_SLATE, size_pt=8.8)
+    add_hyperlink(p_c1, "mailto:ravindrachowdary8008@gmail.com", "ravindrachowdary8008@gmail.com", color=HEX_SLATE, size_pt=9.0)
 
     # Contact Line 2 (Profiles)
     p_c2 = doc.add_paragraph()
-    format_para(p_c2, before=0.0, after=3.0)
-    add_hyperlink(p_c2, "https://linkedin.com/in/ravindrachowdary", "linkedin.com/in/ravindrachowdary", color=HEX_SLATE, size_pt=8.8)
+    format_para(p_c2, before=0.0, after=4.0)
+    add_hyperlink(p_c2, "https://linkedin.com/in/ravindrachowdary", "linkedin.com/in/ravindrachowdary", color=HEX_SLATE, size_pt=9.0)
     r = p_c2.add_run("  •  ")
     r.font.name = "Arial"
-    r.font.size = Pt(8.8)
+    r.font.size = Pt(9.0)
     r.font.color.rgb = COLOR_SLATE
-    add_hyperlink(p_c2, "https://github.com/RAVINDRA8008", "github.com/RAVINDRA8008", color=HEX_SLATE, size_pt=8.8)
+    add_hyperlink(p_c2, "https://github.com/RAVINDRA8008", "github.com/RAVINDRA8008", color=HEX_SLATE, size_pt=9.0)
     r = p_c2.add_run("  •  ")
     r.font.name = "Arial"
-    r.font.size = Pt(8.8)
+    r.font.size = Pt(9.0)
     r.font.color.rgb = COLOR_SLATE
-    add_hyperlink(p_c2, "https://huggingface.co/r5avindra", "huggingface.co/r5avindra", color=HEX_SLATE, size_pt=8.8)
+    add_hyperlink(p_c2, "https://huggingface.co/r5avindra", "huggingface.co/r5avindra", color=HEX_SLATE, size_pt=9.0)
     r = p_c2.add_run("  •  ")
     r.font.name = "Arial"
-    r.font.size = Pt(8.8)
+    r.font.size = Pt(9.0)
     r.font.color.rgb = COLOR_SLATE
-    add_hyperlink(p_c2, "https://lynkzen.in", "lynkzen.in", color=HEX_SLATE, size_pt=8.8)
+    add_hyperlink(p_c2, "https://lynkzen.in", "lynkzen.in", color=HEX_SLATE, size_pt=9.0)
 
 
     # ==================== PROFESSIONAL EXPERIENCE ====================
@@ -201,12 +201,12 @@ def create_resume():
     add_tab_heading(
         left_runs=[("Waani – Conversational Voice AI Platform", True, False, COLOR_CARBON)],
         right_runs=[("Chennai, India", False, False, COLOR_SLATE)],
-        before=2.0, after=0.4
+        before=2.8, after=0.5
     )
     add_tab_heading(
         left_runs=[("Founder & Lead Engineer", False, True, COLOR_CARBON)],
         right_runs=[("July 2026 – Present", False, False, COLOR_SLATE)],
-        before=0.0, after=1.2
+        before=0.0, after=1.5
     )
     add_bullet_item([
         ("Architected an ultra-low-latency duplex voice pipeline orchestrating telephony protocols, streaming STT (Sarvam AI), and LLM token inference, achieving ", False),
@@ -224,12 +224,12 @@ def create_resume():
     add_tab_heading(
         left_runs=[("link", "https://lynkzen.in", "LynkZen – Instagram DM Automation SaaS", True, False)],
         right_runs=[("Chennai, India", False, False, COLOR_SLATE)],
-        before=2.5, after=0.4
+        before=3.2, after=0.5
     )
     add_tab_heading(
-        left_runs=[("Founding Engineer", False, True, COLOR_CARBON)],
+        left_runs=[("Founder & Lead Engineer", False, True, COLOR_CARBON)],
         right_runs=[("April 2026 – June 2026", False, False, COLOR_SLATE)],
-        before=0.0, after=1.2
+        before=0.0, after=1.5
     )
     add_bullet_item([
         ("Built and launched an event-driven Instagram automation engine using Next.js, TypeScript, and Tailwind CSS, decoupling webhook ingest via BullMQ asynchronous worker queues to absorb bursts of 10k+ concurrent webhook events.", False)
@@ -259,7 +259,7 @@ def create_resume():
             ("  •  ", False, False, COLOR_SLATE),
             ("IEEE ICETEA 2026", True, False, COLOR_CARBON)
         ],
-        before=2.0, after=1.2
+        before=2.8, after=1.5
     )
     add_bullet_item([
         ("Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.", False)
@@ -289,7 +289,7 @@ def create_resume():
         right_runs=[
             ("link", "https://ieeexplore.ieee.org/document/11085491", "IEEE ICICV 2025", True, False)
         ],
-        before=2.5, after=1.2
+        before=3.2, after=1.5
     )
     add_bullet_item([
         ("Built an automated transcription pipeline combining Whisper with timestamp alignment for frame-accurate subtitles (.srt/.vtt), quantizing to INT8 via ONNX Runtime to achieve a ", False),
@@ -310,7 +310,7 @@ def create_resume():
         right_runs=[
             ("link", "https://ieeexplore.ieee.org/document/11166870", "IEEE CONIT 2025", True, False)
         ],
-        before=2.5, after=1.2
+        before=3.2, after=1.5
     )
     add_bullet_item([
         ("Designed a campus parking management application with HMAC-SHA256 signed dynamic QR codes, timestamped nonces cached in Redis to prevent replay attacks, and Twilio OTP verification, published as Co-Author (Doc ID: 11166870).", False)
@@ -335,37 +335,37 @@ def create_resume():
 
     for label, text in skills_data:
         p = doc.add_paragraph()
-        format_para(p, before=0.0, after=1.2, line_spacing=1.03)
+        format_para(p, before=0.0, after=2.8, line_spacing=1.05)
         r_lbl = p.add_run(label)
         r_lbl.font.name = "Arial"
-        r_lbl.font.size = Pt(9.1)
+        r_lbl.font.size = Pt(9.35)
         r_lbl.font.bold = True
         r_lbl.font.color.rgb = COLOR_CARBON
         
         r_txt = p.add_run(text)
         r_txt.font.name = "Arial"
-        r_txt.font.size = Pt(9.1)
+        r_txt.font.size = Pt(9.35)
         r_txt.font.color.rgb = COLOR_CARBON
 
     # Certifications Row with Hyperlinks
     p_cert = doc.add_paragraph()
-    format_para(p_cert, before=0.0, after=1.5, line_spacing=1.03)
+    format_para(p_cert, before=0.0, after=3.0, line_spacing=1.05)
     r_cert = p_cert.add_run("Certifications: ")
     r_cert.font.name = "Arial"
-    r_cert.font.size = Pt(9.1)
+    r_cert.font.size = Pt(9.35)
     r_cert.font.bold = True
     r_cert.font.color.rgb = COLOR_CARBON
     
     add_hyperlink(p_cert, "https://catalog-education.oracle.com/pls/certview/sharebadge?id=612702728476686D7B2D24830AC8D7769D0C9345E82B11C94343869FEEB8DF92", 
-                  "Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909)", color=HEX_CARBON, size_pt=9.1)
+                  "Oracle Certified Professional: MySQL 8.0 Database Developer (1Z0-909)", color=HEX_CARBON, size_pt=9.35)
     
     r_sep = p_cert.add_run("  •  ")
     r_sep.font.name = "Arial"
-    r_sep.font.size = Pt(9.1)
+    r_sep.font.size = Pt(9.35)
     r_sep.font.color.rgb = COLOR_SLATE
     
     add_hyperlink(p_cert, "https://www.credly.com/badges/3dc45737-a240-4ebd-865c-ac932ab9d71c/public_url",
-                  "AWS Certified Cloud Practitioner", color=HEX_CARBON, size_pt=9.1)
+                  "AWS Certified Cloud Practitioner", color=HEX_CARBON, size_pt=9.35)
 
 
     # ==================== EDUCATION ====================
@@ -374,7 +374,7 @@ def create_resume():
     add_tab_heading(
         left_runs=[("SRM Institute of Science and Technology", True, False, COLOR_CARBON)],
         right_runs=[("Chennai, India", False, False, COLOR_SLATE)],
-        before=2.0, after=0.4
+        before=2.8, after=0.5
     )
     add_tab_heading(
         left_runs=[
@@ -382,7 +382,7 @@ def create_resume():
             ("(CGPA: 8.01/10)", False, False, COLOR_SLATE)
         ],
         right_runs=[("May 2026", False, False, COLOR_SLATE)],
-        before=0.0, after=1.0
+        before=0.0, after=1.5
     )
 
     # 3. Save to DOCX
@@ -391,15 +391,13 @@ def create_resume():
     out_path_full = os.path.abspath("Ravindra_Chowdary_Jonnagadla_Resume.docx")
     
     doc.save(out_path_resume12)
-    print(f"Generated: {out_path_resume12}")
     doc.save(out_path_single)
-    print(f"Generated: {out_path_single}")
-    
     try:
         doc.save(out_path_full)
-        print(f"Generated: {out_path_full}")
     except PermissionError:
-        print(f"Notice: {out_path_full} is currently open in Word. Saved to {out_path_single} instead!")
+        print(f"Notice: {out_path_full} was locked by Word. Saved to {out_path_single} & {out_path_resume12}.")
+
+    print("DOCX files generated successfully.")
 
 if __name__ == "__main__":
     create_resume()
