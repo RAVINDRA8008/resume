@@ -58,6 +58,16 @@ def add_hyperlink(paragraph, url, text, color="111827", underline=False, bold=Fa
 def generate_student_docx():
     doc = docx.Document()
 
+    # Document Metadata (Clean Executive Author & Properties)
+    cp = doc.core_properties
+    cp.author = "Ravindra Chowdary Jonnagadla"
+    cp.last_modified_by = "Ravindra Chowdary Jonnagadla"
+    cp.title = "Ravindra Chowdary Jonnagadla - Student & Fellowship Resume"
+    cp.subject = "Computer Science Graduate & AI Systems Researcher"
+    cp.keywords = "Computer Science, SRM Institute of Science and Technology, Cloud Computing, AI Researcher, Founder, IEEE, PyTorch"
+    cp.comments = "Academic & Fellowship Technical Resume"
+    cp.category = "Academic Resume"
+
     COLOR_CARBON = RGBColor(17, 24, 39)
     COLOR_SLATE = RGBColor(75, 85, 99)
     HEX_CARBON = "111827"

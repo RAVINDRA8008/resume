@@ -9,6 +9,16 @@ from docx.opc.constants import RELATIONSHIP_TYPE
 def create_resume():
     doc = docx.Document()
 
+    # Document Metadata (Clean Executive Author & Properties)
+    cp = doc.core_properties
+    cp.author = "Ravindra Chowdary Jonnagadla"
+    cp.last_modified_by = "Ravindra Chowdary Jonnagadla"
+    cp.title = "Ravindra Chowdary Jonnagadla - Technical Resume"
+    cp.subject = "AI Systems Engineer & Machine Learning Researcher"
+    cp.keywords = "Founder, AI Systems Engineer, Machine Learning Researcher, Deep Learning, Voice AI, PyTorch, Distributed Systems"
+    cp.comments = "Executive Technical Resume"
+    cp.category = "Technical Resume"
+
     # 1. Page Margins & Setup (US Letter, 0.40in sides, 0.32in top, 0.30in bottom)
     for section in doc.sections:
         section.page_width = Inches(8.5)
