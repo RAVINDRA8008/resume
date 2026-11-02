@@ -234,7 +234,7 @@ def generate_student_docx():
         right_runs=[
             ("link", "https://huggingface.co/r5avindra/amers-checkpoints", "Hugging Face", True, False),
             ("  •  ", False, False, COLOR_SLATE),
-            ("IEEE ICETEA 2026", True, False, COLOR_CARBON)
+            ("IEEE ICETEA 2026 (Accepted)", True, False, COLOR_CARBON)
         ],
         before=2.8, after=1.2
     )

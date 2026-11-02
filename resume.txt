@@ -45,7 +45,7 @@ to eliminate race conditions and guarantee zero 429 quota violations against Met
 Technical Projects & Research
 AMERS: Multimodal Emotion Recognition System
 | PyTorch, Signal Processing
-IEEE ICETEA 2026
+IEEE ICETEA 2026 (Accepted)
 • Developed a multimodal emotion recognition architecture synchronizing multi-channel EEG (128Hz) and speech spectrograms via
 Cross-Modal Mutual Attention (CMMA) to capture inter-modal temporal-spatial dynamics.
 • Integrated an Emotion-Aware Gating (EAG) WGAN-GP generator with a PPO reinforcement learning controller, dynamically scheduling
